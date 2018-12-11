@@ -25,7 +25,13 @@ class App extends Component {
             }}
             onData={(res) => {
               return {
+                image: res.HeaderImage,
                 title: res.ResponseName,
+                description: `
+                <p class="releaseDate">${res.ReleaseDate}</p>
+                <p class="price">$${res.PriceInitial}</p>
+                `,
+                url: `https://store.steampowered.com/app/${res.ResponseID}`,
               }
             }}
           />
