@@ -34,6 +34,11 @@ class App extends Component {
                 url: `https://store.steampowered.com/app/${res.ResponseID}`,
               }
             }}
+            sortOptions={[
+              { label: "Best Match", dataField: "_score", sortBy: "desc" },
+              { label: "Lowest Price", dataField: "PriceInitial", sortBy: "asc" },
+              { label: "Highest Price", dataField: "PriceInitial", sortBy: "desc" },
+            ]}
           />
         </ReactiveBase>
       </div >
